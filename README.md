@@ -1,4 +1,4 @@
-# SafeGuard-CV 🦺
+# SafeGuard-CV ⛑️
 ### Real-Time PPE Helmet Detection System for Construction Site Safety
 
 SafeGuard-CV is a real-time computer vision system that detects missing PPE (helmets) on construction sites using a fine-tuned YOLOv8s model, optimized for edge deployment via ONNX FP16 quantization.
@@ -29,13 +29,10 @@ SafeGuard-CV/
 
 ---
 
-## 🏋️ Phase 1: Training (FP32 Baseline)
-- **Model:** YOLOv8s (lightweight, suitable for edge deployment)
+## ⚡ Phase 1: Training (FP32 Baseline)
+- **Model:** YOLOv8s 
 - **Epochs:** 25
 - **Batch Size:** 16
-- **Image Size:** 640x640
-- **Hardware:** Kaggle Tesla T4 GPU
-- **Framework:** Ultralytics YOLOv8
 
 ### Baseline Validation Results (FP32)
 | Class | mAP50 | mAP50-95 |
@@ -66,32 +63,24 @@ yolo export model=best.pt format=onnx half=True
 | **Accuracy Drop** | - | **0.00%** | No loss |
 | **Avg FPS (RTX 3050)** | 44.5 FPS | 36.7 FPS | **+12 FPS ** |
 
-
-> **Key Finding:** FP16 quantization achieved ~20% faster inference with absolutely zero accuracy loss.
-
 ---
 
 ## 🎥 Phase 3: Live Inference Script
-The `live_inference.py` script loads the quantized ONNX model and runs real-time inference on a video or webcam feed with the following overlays:
+The `live_inference.py` script loads the base model and edge model, and runs real-time inference on a video with the following overlays:
+```
+- Bounding boxes with class labels and confidence scores
+- Live Inference FPS (excluding rendering time)
+- Preprocessing latency (ms)
+- Postprocessing / NMS latency (ms)
+```
 
-- ✅ Bounding boxes with class labels and confidence scores
-- ✅ Live Inference FPS (excluding rendering time)
-- ✅ Preprocessing latency (ms)
-- ✅ Postprocessing / NMS latency (ms)
-
-### Detection Classes
-| Box Color | Class | Meaning |
-|---|---|---|
-| ⬜ White | Helmet | Worker is safe |
-| 🟥 Red | No-Helmet | Safety violation! |
-| ⬜ White | Person | Person detected |
 
 ### How to Run
 ```bash
 # Install dependencies
 pip install ultralytics opencv-python numpy
 
-# Run with edge model (recommended)
+# Run with edge model 
 python live_inference.py
 ```
 
@@ -120,6 +109,3 @@ python live_inference.py
 - Kaggle (Tesla T4 GPU)
 
 ---
-
-## 👤 Author
-**Cherian Biju** — [@cherianbiju](https://github.com/cherianbiju)
