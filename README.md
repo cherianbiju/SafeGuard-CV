@@ -69,9 +69,6 @@ The `live_inference.py` script loads the base model and edge model, and runs rea
 - Postprocessing / NMS latency (ms)
 ```
 ---
-## Demo Video
-[Watch Demo Video](https://drive.google.com/file/d/1y47EmafdXdO-dMjd7QP5Lav-sB0ElR3t/view?usp=drive_link)
----
 ## Model Weights
 
 | Model | Format | Size | Link |
@@ -82,7 +79,7 @@ The `live_inference.py` script loads the base model and edge model, and runs rea
 ---
 
 ## 🎬 Demo Video
-[Watch Demo Video](https://drive.google.com/file/d/1y47EmafdXdO-dMjd7QP5Lav-sB0ElR3t/view?usp=drive_link)
+🔗 [Watch Demo Video](https://drive.google.com/file/d/1y47EmafdXdO-dMjd7QP5Lav-sB0ElR3t/view?usp=drive_link)
 
 ---
 
