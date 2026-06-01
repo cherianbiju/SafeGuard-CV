@@ -1,5 +1,5 @@
 # SafeGuard-CV 🦺
-### Real-Time PPE Helmet Detection System for Construction Site Safety
+### Real-Time PPE Compliance Monitoring System using YOLOv8 for Construction Site Safety
 
 SafeGuard-CV is a real-time computer vision system that detects missing PPE (helmets) on construction sites using a fine-tuned YOLOv8s model, optimized for edge deployment via ONNX FP16 quantization.
 
@@ -102,4 +102,12 @@ pip install ultralytics opencv-python numpy
 # Run with edge model 
 python live_inference.py
 ```
+---
+
+## 8. Project Highlights
+
+- Fine-tuned YOLOv8s on 19,800 construction-site images.
+- Evaluated FP32 and FP16 ONNX deployments for edge inference.
+- Built a real-time PPE compliance monitoring pipeline using OpenCV and ONNX Runtime.
+
 ---
