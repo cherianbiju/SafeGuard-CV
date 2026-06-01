@@ -5,12 +5,12 @@ SafeGuard-CV is a real-time computer vision system that detects missing PPE (hel
 
 ---
 
-## Problem Statement
+## 1. Problem Statement
 Construction sites are high-risk environments where workers often skip wearing safety helmets. SafeGuard-CV automatically detects PPE violations in real-time using a camera feed, enabling instant safety alerts.
 
 ---
 
-## Project Structure
+## 2. Project Structure
 ```
 SafeGuard-CV/
 ├── safeguard-cv(finetuning).ipynb   # Model training notebook (Kaggle)
@@ -21,14 +21,14 @@ SafeGuard-CV/
 
 ---
 
-## Dataset
+## 3. Dataset
 - **Source:** [Hardhat Detection by Michael](https://universe.roboflow.com/michael-8jeqe/hardhat-detection-iukt9) — Roboflow Universe
 - **Images:** 19,800
 - **Classes:** Helmet, No-Helmet, Person
 - **Split:** Train / Validation / Test
 
 ---
-
+## 4. Project Pipeline
 ## ⚡ Phase 1: Training (FP32 Baseline)
 - **Model:** YOLOv8s 
 - **Epochs:** 25
@@ -69,14 +69,16 @@ The `live_inference.py` script loads the base model and edge model, and runs rea
 - Postprocessing / NMS latency (ms)
 ```
 ---
-## Model Weights
+
+## ## Downloads & Demo
+### Model Weights
 
 | Model | Format | Size | Link |
 |---|---|---|---|
 | best_fp32.pt | PyTorch FP32 | 21.5 MB | [Download](https://drive.google.com/file/d/1cmFggU_9lFcmii4nhkKHsiE3FwDOmCSy/view?usp=drive_link) |
 | best_fp16.onnx | ONNX FP16 | 21.4 MB | [Download](https://drive.google.com/file/d/1zAjvvnFMbBKyos1MyuiMo-AIbLDy95pX/view?usp=drive_link) |
 
-## Demo Video
+### Demo Video
 🔗 [Watch Demo Video](https://drive.google.com/file/d/1y47EmafdXdO-dMjd7QP5Lav-sB0ElR3t/view?usp=drive_link)
 
 ---
