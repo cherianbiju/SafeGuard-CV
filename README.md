@@ -42,8 +42,6 @@ SafeGuard-CV/
 | No-Helmet | 0.582 | 0.266 |
 | Person | 0.471 | 0.267 |
 
----
-
 ## ⚡ Phase 2: Edge Conversion & Quantization
 - **Format:** ONNX
 - **Quantization:** FP16
@@ -51,7 +49,6 @@ SafeGuard-CV/
 ```bash
 yolo export model=best.pt format=onnx half=True
 ```
----
 
 ## 📊 Performance Benchmark Table
 
@@ -63,8 +60,6 @@ yolo export model=best.pt format=onnx half=True
 | **Accuracy Drop** | - | **0.00%** | No loss |
 | **Avg FPS (RTX 3050)** | 44.5 FPS | 36.7 FPS | **+12 FPS ** |
 
----
-
 ## ⚡ Phase 3: Live Inference Script
 The `live_inference.py` script loads the base model and edge model, and runs real-time inference on a video with the following overlays:
 ```
@@ -73,7 +68,8 @@ The `live_inference.py` script loads the base model and edge model, and runs rea
 - Preprocessing latency (ms)
 - Postprocessing / NMS latency (ms)
 ```
-Demo Video
+---
+## Demo Video
 [Watch Demo Video](https://drive.google.com/file/d/1y47EmafdXdO-dMjd7QP5Lav-sB0ElR3t/view?usp=drive_link)
 ---
 ## Model Weights
