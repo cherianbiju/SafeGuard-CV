@@ -58,7 +58,7 @@ yolo export model=best.pt format=onnx half=True
 | **mAP50** | 0.572 | 0.570 | -0.002 |
 | **mAP50-95** | 0.289 | 0.289 | 0 |
 | **Accuracy Drop** | - | **0.00%** | No loss |
-| **Avg FPS (RTX 3050)** | 44.5 FPS | 36.7 FPS | +12 FPS |
+| **Avg FPS (RTX 3050)** | 24.5 FPS | 36.7 FPS | +12 FPS |
 
 ### ⚡ Phase 3: Live Inference Script
 The `live_inference.py` script loads the base model and edge model, and runs real-time inference on a video with the following overlays:
