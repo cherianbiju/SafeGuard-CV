@@ -57,7 +57,7 @@ yolo export model=best.pt format=onnx half=True
 | **Model Size** | 21.5 MB | 21.4 MB | -0.1 MB |
 | **mAP50** | 0.572 | 0.570 | -0.002 |
 | **mAP50-95** | 0.289 | 0.289 | 0 |
-| **Accuracy Drop** | - | **0.00%** | No loss |
+| **Accuracy Drop** | - | **0.02%** | Negligible loss |
 | **Avg FPS (RTX 3050)** | 24.5 FPS | 36.7 FPS | +12 FPS |
 
 ### ⚡ Phase 3: Live Inference Script
