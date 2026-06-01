@@ -29,7 +29,7 @@ SafeGuard-CV/
 
 ---
 ## 4. Project Pipeline
-## ⚡ Phase 1: Training (FP32 Baseline)
+### ⚡ Phase 1: Training (FP32 Baseline)
 - **Model:** YOLOv8s 
 - **Epochs:** 25
 - **Batch Size:** 16
@@ -42,7 +42,7 @@ SafeGuard-CV/
 | No-Helmet | 0.582 | 0.266 |
 | Person | 0.471 | 0.267 |
 
-## ⚡ Phase 2: Edge Conversion & Quantization
+### ⚡ Phase 2: Edge Conversion & Quantization
 - **Format:** ONNX
 - **Quantization:** FP16
 - **Command:**
@@ -50,17 +50,17 @@ SafeGuard-CV/
 yolo export model=best.pt format=onnx half=True
 ```
 
-## 📊 Performance Benchmark Table
+### 📊 Performance Benchmark Table
 
 | Metric | FP32 (Base) | FP16 ONNX (Edge) | Difference |
 |---|---|---|---|
 | **Model Size** | 21.5 MB | 21.4 MB | -0.1 MB |
 | **mAP50** | 0.572 | 0.570 | -0.002 |
-| **mAP50-95** | 0.289 | 0.289 | **0.000 ** |
+| **mAP50-95** | 0.289 | 0.289 | 0 |
 | **Accuracy Drop** | - | **0.00%** | No loss |
-| **Avg FPS (RTX 3050)** | 44.5 FPS | 36.7 FPS | **+12 FPS ** |
+| **Avg FPS (RTX 3050)** | 44.5 FPS | 36.7 FPS | +12 FPS |
 
-## ⚡ Phase 3: Live Inference Script
+### ⚡ Phase 3: Live Inference Script
 The `live_inference.py` script loads the base model and edge model, and runs real-time inference on a video with the following overlays:
 ```
 - Bounding boxes with class labels and confidence scores
@@ -70,7 +70,7 @@ The `live_inference.py` script loads the base model and edge model, and runs rea
 ```
 ---
 
-## ## Downloads & Demo
+## 5. Downloads & Demo
 ### Model Weights
 
 | Model | Format | Size | Link |
@@ -83,7 +83,7 @@ The `live_inference.py` script loads the base model and edge model, and runs rea
 
 ---
 
-## Tech Stack
+## 6.  Tech Stack
 - Python 3.11.9
 - YOLOv8s (Ultralytics)
 - ONNX Runtime
@@ -94,7 +94,7 @@ The `live_inference.py` script loads the base model and edge model, and runs rea
 ---
 
 
-### How to Run
+## 7. How to Run
 ```bash
 # Install dependencies
 pip install ultralytics opencv-python numpy
