@@ -1,16 +1,16 @@
-# SafeGuard-CV ⛑️
+# SafeGuard-CV 🦺
 ### Real-Time PPE Helmet Detection System for Construction Site Safety
 
 SafeGuard-CV is a real-time computer vision system that detects missing PPE (helmets) on construction sites using a fine-tuned YOLOv8s model, optimized for edge deployment via ONNX FP16 quantization.
 
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 Construction sites are high-risk environments where workers often skip wearing safety helmets. SafeGuard-CV automatically detects PPE violations in real-time using a camera feed, enabling instant safety alerts.
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 ```
 SafeGuard-CV/
 ├── safeguard-cv(finetuning).ipynb   # Model training notebook (Kaggle)
@@ -21,7 +21,7 @@ SafeGuard-CV/
 
 ---
 
-## 📦 Dataset
+## Dataset
 - **Source:** [Hardhat Detection by Michael](https://universe.roboflow.com/michael-8jeqe/hardhat-detection-iukt9) — Roboflow Universe
 - **Images:** 19,800
 - **Classes:** Helmet, No-Helmet, Person
@@ -65,7 +65,7 @@ yolo export model=best.pt format=onnx half=True
 
 ---
 
-## 🎥 Phase 3: Live Inference Script
+## ⚡ Phase 3: Live Inference Script
 The `live_inference.py` script loads the base model and edge model, and runs real-time inference on a video with the following overlays:
 ```
 - Bounding boxes with class labels and confidence scores
@@ -73,20 +73,10 @@ The `live_inference.py` script loads the base model and edge model, and runs rea
 - Preprocessing latency (ms)
 - Postprocessing / NMS latency (ms)
 ```
-
-
-### How to Run
-```bash
-# Install dependencies
-pip install ultralytics opencv-python numpy
-
-# Run with edge model 
-python live_inference.py
-```
-
+Demo Video
+[Watch Demo Video](https://drive.google.com/file/d/1y47EmafdXdO-dMjd7QP5Lav-sB0ElR3t/view?usp=drive_link)
 ---
-
-## 🔗 Model Weights
+## Model Weights
 
 | Model | Format | Size | Link |
 |---|---|---|---|
@@ -96,7 +86,7 @@ python live_inference.py
 ---
 
 ## 🎬 Demo Video
-👉 [Watch Demo Video](https://drive.google.com/file/d/1y47EmafdXdO-dMjd7QP5Lav-sB0ElR3t/view?usp=drive_link)
+[Watch Demo Video](https://drive.google.com/file/d/1y47EmafdXdO-dMjd7QP5Lav-sB0ElR3t/view?usp=drive_link)
 
 ---
 
@@ -108,4 +98,15 @@ python live_inference.py
 - Roboflow
 - Kaggle (Tesla T4 GPU)
 
+---
+
+
+### How to Run
+```bash
+# Install dependencies
+pip install ultralytics opencv-python numpy
+
+# Run with edge model 
+python live_inference.py
+```
 ---
