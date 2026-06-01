@@ -87,7 +87,7 @@ The `live_inference.py` script loads the base model and edge model, and runs rea
 ---
 
 ## 🛠️ Tech Stack
-- Python 3.12
+- Python 3.11.9
 - YOLOv8s (Ultralytics)
 - ONNX Runtime
 - OpenCV
