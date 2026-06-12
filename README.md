@@ -79,7 +79,7 @@ The `live_inference.py` script loads the base model and edge model, and runs rea
 | best_fp16.onnx | ONNX FP16 | 21.4 MB | [Download](https://drive.google.com/file/d/1zAjvvnFMbBKyos1MyuiMo-AIbLDy95pX/view?usp=drive_link) |
 
 ### Demo Video
-🔗 [https://youtu.be/P4oFHBeiiNY](url)
+🔗 [Watch Demo on YouTube](https://youtu.be/P4oFHBeiiNY)
 
 ---
 
